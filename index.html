@@ -1,9 +1,13 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="theme-color" content="#04080f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Dashboard360 — Know Your Numbers Every Morning</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500&display=swap"
@@ -13,20 +17,69 @@
   </head>
   <body>
     <!-- NAV -->
-
     <nav id="navbar">
       <div class="nav-logo">
         <div class="logo-icon">D</div>
         <span>Dashboard<span class="teal">360</span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a
+            href="#services"
+            onclick="
+              event.preventDefault();
+              smoothScroll('services');
+            "
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#how-it-works"
+            onclick="
+              event.preventDefault();
+              smoothScroll('how-it-works');
+            "
+            >How It Works</a
+          >
+        </li>
+        <li>
+          <a
+            href="#pricing"
+            onclick="
+              event.preventDefault();
+              smoothScroll('pricing');
+            "
+            >Pricing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            onclick="
+              event.preventDefault();
+              smoothScroll('faq');
+            "
+            >FAQ</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            onclick="
+              event.preventDefault();
+              smoothScroll('contact');
+            "
+            >Contact</a
+          >
+        </li>
       </ul>
       <div class="nav-right">
-        <button class="btn-demo" onclick="scrollTo('contact')">
+        <button
+          class="btn-demo"
+          style="touch-action: manipulation"
+          onclick="smoothScroll('contact')"
+        >
           Free Demo
         </button>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -36,19 +89,58 @@
     </nav>
 
     <!-- MOBILE MENU -->
-
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="#how-it-works" class="mobile-link">How It Works</a>
-      <a href="#pricing" class="mobile-link">Pricing</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <button class="btn-demo-full" onclick="scrollTo('contact')">
+      <a
+        href="#services"
+        class="mobile-link"
+        onclick="
+          event.preventDefault();
+          smoothScroll('services');
+        "
+        >Services</a
+      >
+      <a
+        href="#how-it-works"
+        class="mobile-link"
+        onclick="
+          event.preventDefault();
+          smoothScroll('how-it-works');
+        "
+        >How It Works</a
+      >
+      <a
+        href="#pricing"
+        class="mobile-link"
+        onclick="
+          event.preventDefault();
+          smoothScroll('pricing');
+        "
+        >Pricing</a
+      >
+      <a
+        href="#faq"
+        class="mobile-link"
+        onclick="
+          event.preventDefault();
+          smoothScroll('faq');
+        "
+        >FAQ</a
+      >
+      <a
+        href="#contact"
+        class="mobile-link"
+        onclick="
+          event.preventDefault();
+          smoothScroll('contact');
+        "
+        >Contact</a
+      >
+      <button class="btn-demo-full" onclick="smoothScroll('contact')">
         Get Free Demo
       </button>
     </div>
 
     <!-- HERO -->
-
     <section id="home" class="hero">
       <div class="hero-bg">
         <div class="hero-glow-1"></div>
@@ -96,10 +188,14 @@
             &#x91C;&#x93E;&#x928;&#x947;&#x902;&#x22;
           </p>
           <div class="hero-btns">
-            <button class="btn-primary" onclick="scrollTo('contact')">
+            <button
+              class="btn-primary"
+              style="touch-action: manipulation"
+              onclick="smoothScroll('contact')"
+            >
               📊 Get Free Demo
             </button>
-            <button class="btn-secondary" onclick="scrollTo('services')">
+            <button class="btn-secondary" onclick="smoothScroll('services')">
               See What We Build →
             </button>
           </div>
@@ -119,7 +215,7 @@
             <div class="mockup-kpis">
               <div class="kpi teal-border">
                 <div class="kpi-l">Sales</div>
-                <div class="kpi-v">₹1.92L</div>
+                <div class="kpi-v">&#8377;1.92L</div>
                 <div class="kpi-d up">+11.1%</div>
               </div>
               <div class="kpi gold-border">
@@ -129,17 +225,17 @@
               </div>
               <div class="kpi blue-border">
                 <div class="kpi-l">Cash Net</div>
-                <div class="kpi-v">₹3.5L</div>
+                <div class="kpi-v">&#8377;3.5L</div>
                 <div class="kpi-d dn">-40.8%</div>
               </div>
               <div class="kpi green-border">
                 <div class="kpi-l">Profit</div>
-                <div class="kpi-v">₹11.5L</div>
+                <div class="kpi-v">&#8377;11.5L</div>
                 <div class="kpi-d dn">-6.1%</div>
               </div>
             </div>
             <div class="mockup-chart">
-              <div class="chart-label">Sales Trend — Last 20 Days</div>
+              <div class="chart-label">Sales Trend &#8212; Last 20 Days</div>
               <div class="bars" id="heroBars"></div>
               <div class="chart-tags">
                 <span class="ctag teal">7 Companies</span>
@@ -152,8 +248,52 @@
       </div>
     </section>
 
-    <!-- STATS -->
+    <!-- SOCIAL PROOF STRIP -->
+    <section class="proof-strip">
+      <div class="container">
+        <div class="proof-inner fade-in">
+          <div class="proof-quote-wrap">
+            <div class="proof-stars">★★★★★</div>
+            <blockquote class="proof-quote">
+              "Finally I can see all 7 companies in one place every morning. The
+              GP ratio tracking alone has changed how I advise my clients."
+            </blockquote>
+            <div class="proof-author">
+              <div class="proof-avatar">CA</div>
+              <div class="proof-meta">
+                <div class="proof-name">CA Anand Mutha</div>
+                <div class="proof-role">
+                  A.R. Mutha &amp; Co. · Nashik · Chartered Accountant
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-stats-col">
+            <div class="proof-stat">
+              <div class="proof-stat-num">7</div>
+              <div class="proof-stat-label">
+                Companies tracked live on this dashboard
+              </div>
+            </div>
+            <div class="proof-stat">
+              <div class="proof-stat-num">&#8377;4.94M</div>
+              <div class="proof-stat-label">
+                Revenue leakage identified in first analysis
+              </div>
+            </div>
+            <div class="proof-stat">
+              <div class="proof-stat-num">26K+</div>
+              <div class="proof-stat-label">
+                Transactions processed across all companies
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- STATS -->
     <section class="stats-section">
       <div class="container">
         <div class="stats-grid">
@@ -180,7 +320,6 @@
     </section>
 
     <!-- SERVICES -->
-
     <section id="services" class="section">
       <div class="container">
         <div class="section-head fade-in">
@@ -266,7 +405,6 @@
     </section>
 
     <!-- WHY INDIA -->
-
     <section class="section why-section">
       <div class="container">
         <div class="section-head fade-in center">
@@ -337,7 +475,6 @@
     </section>
 
     <!-- INDUSTRIES -->
-
     <section class="section">
       <div class="container">
         <div class="section-head fade-in">
@@ -390,7 +527,6 @@
     </section>
 
     <!-- PROCESS -->
-
     <section id="how-it-works" class="section process-section">
       <div class="container">
         <div class="section-head fade-in center">
@@ -436,7 +572,6 @@
     </section>
 
     <!-- PRICING -->
-
     <section id="pricing" class="section">
       <div class="container">
         <div class="section-head fade-in center">
@@ -456,7 +591,7 @@
               <li>Monthly updates</li>
               <li>WhatsApp support</li>
             </ul>
-            <button class="btn-outline" onclick="scrollTo('contact')">
+            <button class="btn-outline" onclick="smoothScroll('contact')">
               Get Started
             </button>
           </div>
@@ -474,7 +609,11 @@
               <li>Mobile app access</li>
               <li>Priority support</li>
             </ul>
-            <button class="btn-primary" onclick="scrollTo('contact')">
+            <button
+              class="btn-primary"
+              style="touch-action: manipulation"
+              onclick="smoothScroll('contact')"
+            >
               Get Started
             </button>
           </div>
@@ -491,7 +630,7 @@
               <li>User access control</li>
               <li>Dedicated support</li>
             </ul>
-            <button class="btn-outline" onclick="scrollTo('contact')">
+            <button class="btn-outline" onclick="smoothScroll('contact')">
               Get Started
             </button>
           </div>
@@ -499,38 +638,240 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- FAQ -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-label">Common Questions</div>
+          <h2>Frequently Asked<br /><span class="teal">Questions</span></h2>
+          <p>Everything you need to know before getting started.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>🔒 Is my data safe with Dashboard360?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Absolutely. Your data never leaves your own systems without your
+                permission. We use Microsoft Power BI — which is
+                enterprise-grade software trusted by Fortune 500 companies
+                worldwide. All data connections are secured with encryption. We
+                do not store your raw business data on our servers. Your Tally
+                or Excel data stays on your computer — we only connect to read
+                it and display it on your dashboard. You have full control at
+                all times.
+              </p>
+            </div>
+          </div>
 
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>👨‍💻 Do I need a technical team or IT person?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                No technical team needed at all! That is the whole point of
+                Dashboard360. Your accountant continues working in Tally or
+                Excel exactly as before — nothing changes for them. We handle
+                all the technical setup, data connection and dashboard building
+                on our side. Once your dashboard is ready, we give you a
+                30-minute training session in your language (Hindi, Marathi or
+                English). After that, you simply open the dashboard on your
+                phone or laptop every morning — just like opening WhatsApp. No
+                IT knowledge required!
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>💳 Do I need to buy a Power BI license separately?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                For most small businesses — No! Power BI Desktop is completely
+                free to use on your computer. If you want to view the dashboard
+                on your phone or share it with multiple team members, you may
+                need Power BI Pro (approximately ₹700–800 per user per month).
+                However, for single-owner businesses, we can set up a free
+                sharing method so you can view everything without any extra
+                license cost. We will guide you on the most cost-effective
+                option based on your specific needs during our free consultation
+                call.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>⏱️ How long does it take to build my dashboard?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Typically 5 to 7 working days from the day we receive your data.
+                Simple dashboards for single companies can be ready in 3 days.
+                Complex multi-company dashboards with Tally integration may take
+                up to 10 days. We keep you updated at every step and share a
+                preview before final delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>🔄 What if my data changes every day?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                That is exactly what we are built for! We set up automatic data
+                refresh so your dashboard updates every morning without any
+                manual work. Your accountant exports from Tally or saves the
+                Excel file — and the dashboard refreshes automatically. You see
+                fresh numbers every day when you wake up — just like your
+                WhatsApp messages!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
     <section id="contact" class="section cta-section">
       <div class="cta-glow"></div>
-      <div class="container center fade-in">
-        <div class="section-label">Get Started Today</div>
-        <h2>
-          Ready To Know Your<br /><span class="teal"
-            >Numbers Every Morning?</span
-          >
-        </h2>
-        <p class="cta-sub">
-          Free 15-minute demo. No obligation. See your business data come alive.
-        </p>
-        <p class="hindi-text">
-          &#x22;&#x906;&#x91C; &#x939;&#x940; &#x905;&#x92A;&#x928;&#x93E;
-          &#x92B;&#x94D;&#x930;&#x940; &#x921;&#x947;&#x92E;&#x94B;
-          &#x92C;&#x941;&#x915; &#x915;&#x930;&#x947;&#x902;&#x22;
-        </p>
-        <a href="https://wa.me/918669596866" class="btn-wa" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-            />
-          </svg>
-          WhatsApp Us for Free Demo
-        </a>
+      <div class="container fade-in">
+        <div class="cta-grid">
+          <!-- LEFT: copy -->
+          <div class="cta-left">
+            <div class="section-label">Get Started Today</div>
+            <h2>
+              Ready To Know Your<br /><span class="teal"
+                >Numbers Every Morning?</span
+              >
+            </h2>
+            <p class="cta-sub">
+              Free 15-minute demo. No obligation. See your business data come
+              alive.
+            </p>
+            <p class="hindi-text">
+              &#x22;&#x906;&#x91C; &#x939;&#x940; &#x905;&#x92A;&#x928;&#x93E;
+              &#x92B;&#x94D;&#x930;&#x940; &#x921;&#x947;&#x92E;&#x94B;
+              &#x92C;&#x941;&#x915; &#x915;&#x930;&#x947;&#x902;&#x22;
+            </p>
+            <div class="cta-trust-list">
+              <div class="cta-trust-item">
+                <span class="cta-trust-icon">✅</span> Free 15-minute demo call
+              </div>
+              <div class="cta-trust-item">
+                <span class="cta-trust-icon">✅</span> Dashboard ready in 5–7
+                days
+              </div>
+              <div class="cta-trust-item">
+                <span class="cta-trust-icon">✅</span> Works with your existing
+                Tally / Excel
+              </div>
+              <div class="cta-trust-item">
+                <span class="cta-trust-icon">✅</span> No IT team needed on your
+                side
+              </div>
+              <div class="cta-trust-item">
+                <span class="cta-trust-icon">✅</span> Backed by CA expertise
+              </div>
+            </div>
+            <div class="cta-email-direct">
+              <span class="cta-email-label">Or email us directly —</span>
+              <a href="mailto:rupeshsolase360@gmail.com" class="cta-email-link"
+                >rupeshsolase360@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div class="cta-form-wrap">
+            <div class="cta-form-head">
+              <div class="cta-form-title">Book Your Free Demo</div>
+              <div class="cta-form-sub">We'll call you back within 2 hours</div>
+            </div>
+            <div class="cta-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Your Name *</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    id="f-name"
+                    placeholder="Rajesh Sharma"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input
+                    type="tel"
+                    class="form-input"
+                    placeholder="+91 98765 43210"
+                    id="f-phone"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Business Type *</label>
+                <select class="form-input form-select" id="f-biz">
+                  <option value="" disabled selected>
+                    Select your industry
+                  </option>
+                  <option>Manufacturing</option>
+                  <option>Wholesale / Trading</option>
+                  <option>Retail</option>
+                  <option>Restaurant / Food</option>
+                  <option>Construction / Real Estate</option>
+                  <option>Distribution</option>
+                  <option>CA / Accounting Firm</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">What do you want to track?</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  id="f-goal"
+                  placeholder="e.g. Daily sales, GP ratio, cash position..."
+                />
+              </div>
+              <button
+                class="btn-form-submit"
+                id="formSubmitBtn"
+                onclick="submitContactForm()"
+              >
+                <span id="formBtnText">📊 Get My Free Demo</span>
+              </button>
+              <p class="form-note">
+                No spam. No cold calls. Just a 15-min dashboard walkthrough.
+              </p>
+            </div>
+            <div class="form-success" id="formSuccess" style="display: none">
+              <div class="success-icon">✅</div>
+              <div class="success-title">We've got your details!</div>
+              <div class="success-msg">
+                We've received your details and will email you at
+                <strong style="color: var(--teal)"
+                  >rupeshsolase360@gmail.com</strong
+                >
+                to schedule your free 15-minute demo within a few hours.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-
     <footer>
       <div class="container footer-row">
         <div class="nav-logo">
@@ -541,9 +882,30 @@
           © 2025 DataVista Solutions — Built For India 🇮🇳
         </div>
         <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
+          <a
+            href="#services"
+            onclick="
+              event.preventDefault();
+              smoothScroll('services');
+            "
+            >Services</a
+          >
+          <a
+            href="#pricing"
+            onclick="
+              event.preventDefault();
+              smoothScroll('pricing');
+            "
+            >Pricing</a
+          >
+          <a
+            href="#contact"
+            onclick="
+              event.preventDefault();
+              smoothScroll('contact');
+            "
+            >Contact</a
+          >
         </div>
       </div>
     </footer>
