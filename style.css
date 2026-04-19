@@ -837,7 +837,7 @@ ul {
   line-height: 1.65;
   font-weight: 400;
 }
-<<<<<<< HEAD
+
 /* ── TEAM SECTION ── */
 .team-grid {
   display: grid;
@@ -943,8 +943,6 @@ ul {
   color: var(--text3);
   line-height: 1.4;
 }
-=======
->>>>>>> 10b46c7213afb1d16c4cf118181ba85a0bac42ae
 
 /* ── PRICING ── */
 .pricing-grid {
@@ -1144,13 +1142,11 @@ footer {
   .hero-mock {
     display: none;
   }
-<<<<<<< HEAD
   .hero {
     min-height: unset;
     padding: 100px 0 60px;
   }
-=======
->>>>>>> 10b46c7213afb1d16c4cf118181ba85a0bac42ae
+
   .hero-text {
     max-width: 600px;
     margin: 0 auto;
@@ -1976,7 +1972,6 @@ footer {
 .cta-email-link:hover {
   opacity: 0.8;
 }
-<<<<<<< HEAD
 
 /* ── SERVICE CARD DASHBOARD PREVIEWS ── */
 .svc-card {
@@ -2222,5 +2217,3 @@ footer {
     padding: 18px 16px;
   }
 }
-=======
->>>>>>> 10b46c7213afb1d16c4cf118181ba85a0bac42ae
