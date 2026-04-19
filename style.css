@@ -2217,19 +2217,3 @@ footer {
     padding: 18px 16px;
   }
 }
-
-/* ── NAV OVERFLOW FIX ── */
-.nav-links {
-  gap: 16px;
-}
-.nav-links a {
-  font-size: 12px;
-}
-@media (max-width: 1200px) {
-  .nav-links {
-    gap: 12px;
-  }
-  .nav-links a {
-    font-size: 11px;
-  }
-}
